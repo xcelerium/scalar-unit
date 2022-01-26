@@ -1,0 +1,6 @@
+
+-f $RISCV_CORE_ROOT/build/Flist.cv64a6_imafdc_sv39
+-f $HYDRA_SU_ROOT/build/periph_flist
+
+$RISCV_CORE_ROOT/corev_apu/tb/ariane_soc_pkg.sv
+$HYDRA_SU_ROOT/src/hydra_su.sv

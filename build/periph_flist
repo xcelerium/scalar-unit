@@ -1,0 +1,149 @@
+// AXI Interconnect (XBAR) file list
+//   (axi_node)
+
+//$EXTERN/../../verif/tb/src/axi_pkg.sv
+
+// --------
+// axi interface
+// --------
+
+$EXTERN/openhwgroup/cva6/src/axi/src/axi_intf.sv
+
+// --------
+// ariane_axi_pkg
+// --------
+// openhwgroup/cva6/include
+
+$EXTERN/openhwgroup/cva6/include/ariane_axi_pkg.sv
+
+// --------
+// axi_adapter
+// --------
+// openhwgroup/cva6/src
+// openhwgroup/cva6/include
+
+$EXTERN/openhwgroup/cva6/include/ariane_axi_pkg.sv
+$EXTERN/openhwgroup/cva6/src/axi_adapter.sv
+
+// --------
+// axi_node
+// --------
+
+$EXTERN/openhwgroup/cva6/src/common_cells/src/stream_arbiter.sv
+$EXTERN/openhwgroup/cva6/src/common_cells/src/stream_arbiter_flushable.sv
+//$EXTERN/openhwgroup/cva6/src/common_cells/src/fifo_v3.sv
+//$EXTERN/openhwgroup/cva6/src/common_cells/src/rr_arb_tree.sv
+$EXTERN/openhwgroup/cva6/src/common_cells/src/deprecated/fifo_v2.sv
+
+$EXTERN/openhwgroup/cva6/src/axi_node/src/axi_address_decoder_AR.sv
+$EXTERN/openhwgroup/cva6/src/axi_node/src/axi_address_decoder_AW.sv
+$EXTERN/openhwgroup/cva6/src/axi_node/src/axi_address_decoder_BR.sv
+$EXTERN/openhwgroup/cva6/src/axi_node/src/axi_address_decoder_BW.sv
+$EXTERN/openhwgroup/cva6/src/axi_node/src/axi_address_decoder_DW.sv
+$EXTERN/openhwgroup/cva6/src/axi_node/src/axi_node_arbiter.sv
+$EXTERN/openhwgroup/cva6/src/axi_node/src/axi_AR_allocator.sv
+$EXTERN/openhwgroup/cva6/src/axi_node/src/axi_AW_allocator.sv
+$EXTERN/openhwgroup/cva6/src/axi_node/src/axi_BR_allocator.sv
+$EXTERN/openhwgroup/cva6/src/axi_node/src/axi_BW_allocator.sv
+$EXTERN/openhwgroup/cva6/src/axi_node/src/axi_DW_allocator.sv
+$EXTERN/openhwgroup/cva6/src/axi_node/src/axi_multiplexer.sv
+
+$EXTERN/openhwgroup/cva6/src/axi_node/src/axi_request_block.sv
+$EXTERN/openhwgroup/cva6/src/axi_node/src/axi_response_block.sv
+
+$EXTERN/openhwgroup/cva6/src/axi_node/src/axi_node.sv
+
+$EXTERN/openhwgroup/cva6/src/axi_node/src/axi_node_intf_wrap.sv
+
+// --------
+// axi2mem
+// --------
+
+$EXTERN/openhwgroup/cva6/src/axi_mem_if/src/axi2mem.sv
+
+// --------
+// axi2apb
+// --------
+// pulp-platform/axi_slice
+
+$EXTERN/openhwgroup/cva6/src/common_cells/src/deprecated/fifo_v1.sv
+$EXTERN/openhwgroup/cva6/fpga/src/axi_slice/src/axi_single_slice.sv
+
+$EXTERN/openhwgroup/cva6/fpga/src/axi_slice/src/axi_ar_buffer.sv
+$EXTERN/openhwgroup/cva6/fpga/src/axi_slice/src/axi_aw_buffer.sv
+$EXTERN/openhwgroup/cva6/fpga/src/axi_slice/src/axi_w_buffer.sv
+$EXTERN/openhwgroup/cva6/fpga/src/axi_slice/src/axi_r_buffer.sv
+$EXTERN/openhwgroup/cva6/fpga/src/axi_slice/src/axi_b_buffer.sv
+
+// --------
+// axi2apb
+// --------
+// pulp-plutform/axi2apb
+$EXTERN/openhwgroup/cva6/fpga/src/axi2apb/src/axi2apb_64_32.sv
+
+// --------
+// register_interface
+// --------
+// pulp-plutform/register_interface
+$EXTERN/openhwgroup/cva6/src/register_interface/src/reg_intf_pkg.sv
+$EXTERN/openhwgroup/cva6/src/register_interface/src/reg_intf.sv
+$EXTERN/openhwgroup/cva6/src/register_interface/src/apb_to_reg.sv
+
+// --------
+// RV PLIC
+// --------
+// pulp-plutform/rv_plic
+$EXTERN/openhwgroup/cva6/src/rv_plic/rtl/plic_top.sv
+$EXTERN/openhwgroup/cva6/src/rv_plic/rtl/rv_plic_gateway.sv
+$EXTERN/openhwgroup/cva6/src/rv_plic/rtl/rv_plic_target.sv
+$EXTERN/openhwgroup/cva6/src/rv_plic/rtl/plic_regmap.sv
+
+// --------
+// CLINT
+// --------
+// openhwgroup/cva6/src/clint/
+
+$EXTERN/openhwgroup/cva6/src/clint/axi_lite_interface.sv
+
+$EXTERN/openhwgroup/cva6/src/clint/clint.sv
+
+// --------
+// axi_slave_connect, axi_master_connect
+// --------
+// openhwgroup/cva6/src/util/
+
+$EXTERN/openhwgroup/cva6/src/util/axi_slave_connect.sv
+$EXTERN/openhwgroup/cva6/src/util/axi_master_connect.sv
+
+// --------
+// apb_timer
+// --------
+// pulp-platform/apb_timer
+
+$EXTERN/openhwgroup/cva6/fpga/src/apb_timer/apb_timer.sv
+$EXTERN/openhwgroup/cva6/fpga/src/apb_timer/timer.sv
+
+// --------
+// riscv dbg
+// --------
+
+// pulp-platform/tech_cells_generic
+
+$EXTERN/openhwgroup/cva6/src/tech_cells_generic/src/cluster_clock_inverter.sv
+$EXTERN/openhwgroup/cva6/src/tech_cells_generic/src/pulp_clock_mux2.sv
+$EXTERN/openhwgroup/cva6/src/common_cells/src/cdc_2phase.sv
+
+// pulp-platform/riscv_dbg
+
+//$EXTERN/openhwgroup/cva6/src/riscv-dbg/src/dm_pkg.sv
+
+$EXTERN/openhwgroup/cva6/src/riscv-dbg/src/dmi_jtag_tap.sv
+$EXTERN/openhwgroup/cva6/src/riscv-dbg/src/dmi_cdc.sv
+$EXTERN/openhwgroup/cva6/src/riscv-dbg/src/dmi_jtag.sv
+
+$EXTERN/openhwgroup/cva6/src/riscv-dbg/src/dm_csrs.sv
+$EXTERN/openhwgroup/cva6/src/riscv-dbg/src/dm_sba.sv
+$EXTERN/openhwgroup/cva6/src/riscv-dbg/debug_rom/debug_rom.sv
+$EXTERN/openhwgroup/cva6/src/riscv-dbg/src/dm_mem.sv
+$EXTERN/openhwgroup/cva6/src/riscv-dbg/src/dm_top.sv
+

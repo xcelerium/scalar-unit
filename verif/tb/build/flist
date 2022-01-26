@@ -1,0 +1,9 @@
+// component: hydra_su
+// tb build path: hydra_su/verif/tb/build
+// tb src path:   hydra_su/verif/tb/src
+// dut src path:  hydra_su/src
+
+-f $HYDRA_SU_ROOT/build/flist
+
+// Temporary for dp_ram
+$HYDRA_SU_ROOT/verif/tb/src/tb.sv

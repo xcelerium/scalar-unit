@@ -1,0 +1,150 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// Copyright 2021 OpenHW Group
+//
+// Licensed under the Solderpad Hardware Licence, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     https://solderpad.org/licenses/
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+// SPDX-License-Identifier: Apache-2.0 WITH SHL-2.0
+//
+///////////////////////////////////////////////////////////////////////////////
+//
+// Manifest for the CVA6 CORE RTL model.
+//   - This is a CORE-ONLY manifest.
+//   - Relevent synthesis and simulation scripts/Makefiles must set the shell
+//     ENV variable RISCV_CORE_ROOT.
+//
+///////////////////////////////////////////////////////////////////////////////
+
+--define WT_DCACHE
+
+--include ${RISCV_CORE_ROOT}/common/submodules/common_cells/include/
+--include ${RISCV_CORE_ROOT}/common/submodules/common_cells/src/
+--include ${RISCV_CORE_ROOT}/common/local/util/
+
+${RISCV_CORE_ROOT}/src/include/cv64a6_imacfd_sv39_config_pkg.sv
+// Broken (?) dependencies in packages:
+//    - include/ariane_pkg.sv is dependent on src/riscv-dbg/src/dm_pkg.sv
+//      (ariane should not depend on debug-module)
+${RISCV_CORE_ROOT}/src/include/riscv_pkg.sv
+// TODO: should not be needed.
+${RISCV_CORE_ROOT}/corev_apu/riscv-dbg/src/dm_pkg.sv
+${RISCV_CORE_ROOT}/src/include/ariane_pkg.sv
+// TODO: ariane_axi_pkg is dependent on this.
+${RISCV_CORE_ROOT}/corev_apu/axi/src/axi_pkg.sv
+${RISCV_CORE_ROOT}/corev_apu/fpga-support/rtl/SyncSpRamBeNx64.sv
+${RISCV_CORE_ROOT}/src/include/ariane_rvfi_pkg.sv
+
+// Packages
+${RISCV_CORE_ROOT}/src/include/ariane_axi_pkg.sv
+${RISCV_CORE_ROOT}/src/include/wt_cache_pkg.sv
+${RISCV_CORE_ROOT}/src/include/std_cache_pkg.sv
+${RISCV_CORE_ROOT}/src/include/axi_intf.sv
+${RISCV_CORE_ROOT}/src/include/instr_tracer_pkg.sv
+
+// Common Cells
+${RISCV_CORE_ROOT}/common/submodules/common_cells/src/fifo_v3.sv
+${RISCV_CORE_ROOT}/common/submodules/common_cells/src/lfsr.sv
+${RISCV_CORE_ROOT}/common/submodules/common_cells/src/lzc.sv
+${RISCV_CORE_ROOT}/common/submodules/common_cells/src/rr_arb_tree.sv
+${RISCV_CORE_ROOT}/common/submodules/common_cells/src/shift_reg.sv
+${RISCV_CORE_ROOT}/common/submodules/common_cells/src/unread.sv
+${RISCV_CORE_ROOT}/common/submodules/common_cells/src/popcount.sv
+${RISCV_CORE_ROOT}/common/submodules/common_cells/src/exp_backoff.sv
+
+// Floating point unit
+//${RISCV_CORE_ROOT}/src/fpu/src/fpnew_pkg.sv
+//${RISCV_CORE_ROOT}/src/fpu/src/fpnew_cast_multi.sv
+//${RISCV_CORE_ROOT}/src/fpu/src/fpnew_classifier.sv
+//${RISCV_CORE_ROOT}/src/fpu/src/fpnew_divsqrt_multi.sv
+//${RISCV_CORE_ROOT}/src/fpu/src/fpnew_fma_multi.sv
+//${RISCV_CORE_ROOT}/src/fpu/src/fpnew_fma.sv
+//${RISCV_CORE_ROOT}/src/fpu/src/fpnew_noncomp.sv
+//${RISCV_CORE_ROOT}/src/fpu/src/fpnew_opgroup_block.sv
+//${RISCV_CORE_ROOT}/src/fpu/src/fpnew_opgroup_fmt_slice.sv
+//${RISCV_CORE_ROOT}/src/fpu/src/fpnew_opgroup_multifmt_slice.sv
+//${RISCV_CORE_ROOT}/src/fpu/src/fpnew_rounding.sv
+//${RISCV_CORE_ROOT}/src/fpu/src/fpnew_top.sv
+//${RISCV_CORE_ROOT}/src/fpu/src/fpu_div_sqrt_mvp/hdl/defs_div_sqrt_mvp.sv
+//${RISCV_CORE_ROOT}/src/fpu/src/fpu_div_sqrt_mvp/hdl/control_mvp.sv
+//${RISCV_CORE_ROOT}/src/fpu/src/fpu_div_sqrt_mvp/hdl/div_sqrt_top_mvp.sv
+//${RISCV_CORE_ROOT}/src/fpu/src/fpu_div_sqrt_mvp/hdl/iteration_div_sqrt_mvp.sv
+//${RISCV_CORE_ROOT}/src/fpu/src/fpu_div_sqrt_mvp/hdl/norm_div_sqrt_mvp.sv
+//${RISCV_CORE_ROOT}/src/fpu/src/fpu_div_sqrt_mvp/hdl/nrbd_nrsc_mvp.sv
+//${RISCV_CORE_ROOT}/src/fpu/src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv
+
+// Top-level source files (not necessarily instantiated at the top of the cva6).
+${RISCV_CORE_ROOT}/src/ariane.sv
+${RISCV_CORE_ROOT}/src/alu.sv
+// Note: depends on fpnew_pkg, above
+//${RISCV_CORE_ROOT}/src/fpu_wrap.sv
+${RISCV_CORE_ROOT}/src/branch_unit.sv
+${RISCV_CORE_ROOT}/src/compressed_decoder.sv
+${RISCV_CORE_ROOT}/src/controller.sv
+${RISCV_CORE_ROOT}/src/csr_buffer.sv
+${RISCV_CORE_ROOT}/src/csr_regfile.sv
+${RISCV_CORE_ROOT}/src/decoder.sv
+${RISCV_CORE_ROOT}/src/ex_stage.sv
+${RISCV_CORE_ROOT}/src/instr_realign.sv
+${RISCV_CORE_ROOT}/src/id_stage.sv
+${RISCV_CORE_ROOT}/src/issue_read_operands.sv
+${RISCV_CORE_ROOT}/src/issue_stage.sv
+${RISCV_CORE_ROOT}/src/load_unit.sv
+${RISCV_CORE_ROOT}/src/load_store_unit.sv
+${RISCV_CORE_ROOT}/src/mult.sv
+${RISCV_CORE_ROOT}/src/multiplier.sv
+${RISCV_CORE_ROOT}/src/serdiv.sv
+${RISCV_CORE_ROOT}/src/perf_counters.sv
+${RISCV_CORE_ROOT}/src/ariane_regfile_ff.sv
+${RISCV_CORE_ROOT}/src/re_name.sv
+// NOTE: scoreboard.sv modified for DSIM (unchanged for other simulators)
+${RISCV_CORE_ROOT}/src/scoreboard.sv
+${RISCV_CORE_ROOT}/src/store_buffer.sv
+${RISCV_CORE_ROOT}/src/amo_buffer.sv
+${RISCV_CORE_ROOT}/src/store_unit.sv
+${RISCV_CORE_ROOT}/src/commit_stage.sv
+${RISCV_CORE_ROOT}/src/axi_shim.sv
+
+// What is "frontend"?
+${RISCV_CORE_ROOT}/src/frontend/btb.sv
+${RISCV_CORE_ROOT}/src/frontend/bht.sv
+${RISCV_CORE_ROOT}/src/frontend/ras.sv
+${RISCV_CORE_ROOT}/src/frontend/instr_scan.sv
+${RISCV_CORE_ROOT}/src/frontend/instr_queue.sv
+${RISCV_CORE_ROOT}/src/frontend/frontend.sv
+
+// Cache subsystem
+${RISCV_CORE_ROOT}/src/cache_subsystem/wt_dcache_ctrl.sv
+${RISCV_CORE_ROOT}/src/cache_subsystem/wt_dcache_mem.sv
+${RISCV_CORE_ROOT}/src/cache_subsystem/wt_dcache_missunit.sv
+${RISCV_CORE_ROOT}/src/cache_subsystem/wt_dcache_wbuffer.sv
+${RISCV_CORE_ROOT}/src/cache_subsystem/wt_dcache.sv
+${RISCV_CORE_ROOT}/src/cache_subsystem/cva6_icache.sv
+${RISCV_CORE_ROOT}/src/cache_subsystem/wt_cache_subsystem.sv
+${RISCV_CORE_ROOT}/src/cache_subsystem/wt_axi_adapter.sv
+
+// Physical Memory Protection
+// NOTE: pmp.sv modified for DSIM (unchanged for other simulators)
+${RISCV_CORE_ROOT}/src/pmp/src/pmp.sv
+${RISCV_CORE_ROOT}/src/pmp/src/pmp_entry.sv
+
+// Tracer (behavioral code, not RTL)
+${RISCV_CORE_ROOT}/common/local/util/instr_tracer_if.sv
+${RISCV_CORE_ROOT}/common/local/util/instr_tracer.sv
+${RISCV_CORE_ROOT}/common/local/util/sram.sv
+
+// MMU Sv39
+${RISCV_CORE_ROOT}/src/mmu_sv39/mmu.sv
+${RISCV_CORE_ROOT}/src/mmu_sv39/ptw.sv
+${RISCV_CORE_ROOT}/src/mmu_sv39/tlb.sv
+
+// end of manifest
