@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd verif/xbar
+make run TESTGRP=int_bringup_test TEST=test.s

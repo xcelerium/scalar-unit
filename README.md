@@ -1,22 +1,11 @@
-Build And Run Notes
+# Nova Scalar Unit
+### Build Prerequisites
+Create a scratch folder for build artifacts called  /home/$USER/scratch.
 
-# set env vars for su and its component
-
-> source task_setup.bash
-
-# check env vars
-
->echo $HYDRA_SU_ROOT
->echo $RISCV_CORE_ROOT
->echo $SCRATCH_ROOT
-
-# build and run tests 
-
-> cd verif/xbar
-> ls ../tests/
-> make run TESTGRP=int_bringup_test TEST=test.s
-
-# test sources
-> cd verif/test/<testname>
-
-
+*Note: this is the default location. To change the scratch folder path, modify the SCRATCH_ROOT variable in setup.bash.*
+### Build Instructions
+To build the scalar unit, first source the environment variables and then run the build script:
+```
+source setup.bash
+./su_build
+```
