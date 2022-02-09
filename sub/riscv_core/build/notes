@@ -1,0 +1,11 @@
+ clear; /opt/Xilinx/Vivado/2018.2/bin/xvlog -sv -f flist 
+ /opt/Xilinx/Vivado/2018.2/bin/xelab tb
+ /opt/Xilinx/Vivado/2018.2/bin/xsim tb -R
+
+ clear; /opt/Xilinx/Vivado/2018.2/bin/xvlog -sv -f flist 
+ /opt/Xilinx/Vivado/2018.2/bin/xelab tb -debug all
+ /opt/Xilinx/Vivado/2018.2/bin/xsim tb -gui
+
+/opt/Xilinx/Vivado/2018.2/bin/xvlog --work work=../buildlib/work/ -sv -f flist
+/opt/Xilinx/Vivado/2018.2/bin/xelab tb -L work=../buildlib/work/ -debug all
+

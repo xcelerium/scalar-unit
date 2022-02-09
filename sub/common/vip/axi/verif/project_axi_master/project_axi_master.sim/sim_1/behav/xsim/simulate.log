@@ -1,0 +1,121 @@
+Vivado Simulator v2020.3.0
+Time resolution is 1 ps
+read xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx from 00108: status:0
+write 0123456789abcdef0123456789abcdef to 00000: status:0
+write fedcba9876543210fedcba9876543210 to 00010: status:0
+read fedcba9876543210fedcba9876543210 from 00010: status:0
+read 0123456789abcdef0123456789abcdef from 00000: status:0
+*****Write          16-byte Burst to address           0******
+*****Write          16-byte Burst to address           1******
+*****Write          16-byte Burst to address           2******
+*****Write          16-byte Burst to address           3******
+*****Write          16-byte Burst to address           4******
+*****Write          16-byte Burst to address           5******
+*****Write          16-byte Burst to address           6******
+*****Write          16-byte Burst to address           7******
+*****Write          16-byte Burst to address           8******
+*****Write          16-byte Burst to address           9******
+*****Write          16-byte Burst to address          10******
+*****Write          16-byte Burst to address          11******
+*****Write          16-byte Burst to address          12******
+*****Write          16-byte Burst to address          13******
+*****Write          16-byte Burst to address          14******
+*****Write          16-byte Burst to address          15******
+Slave Mem[          0]=  0
+Slave Mem[          1]=  0
+Slave Mem[          2]=  0
+Slave Mem[          3]=  0
+Slave Mem[          4]=  0
+Slave Mem[          5]=  0
+Slave Mem[          6]=  0
+Slave Mem[          7]=  0
+Slave Mem[          8]=  0
+Slave Mem[          9]=  0
+Slave Mem[         10]=  0
+Slave Mem[         11]=  0
+Slave Mem[         12]=  0
+Slave Mem[         13]=  0
+Slave Mem[         14]=  0
+Slave Mem[         15]=  0
+Slave Mem[         16]=  1
+Slave Mem[         17]=  2
+Slave Mem[         18]=  3
+Slave Mem[         19]=  4
+Slave Mem[         20]=  5
+Slave Mem[         21]=  6
+Slave Mem[         22]=  7
+Slave Mem[         23]=  8
+Slave Mem[         24]=  9
+Slave Mem[         25]= 10
+Slave Mem[         26]= 11
+Slave Mem[         27]= 12
+Slave Mem[         28]= 13
+Slave Mem[         29]= 14
+Slave Mem[         30]= 15
+Slave Mem[         31]= 16
+Burst Write 64B at addr     16 at time                  746
+Burst Read  64B at addr     16 at time                  796
+master.mem[        256]=00
+master.mem[        257]=01
+master.mem[        258]=02
+master.mem[        259]=03
+master.mem[        260]=04
+master.mem[        261]=05
+master.mem[        262]=06
+master.mem[        263]=07
+master.mem[        264]=08
+master.mem[        265]=09
+master.mem[        266]=0a
+master.mem[        267]=0b
+master.mem[        268]=0c
+master.mem[        269]=0d
+master.mem[        270]=0e
+master.mem[        271]=0f
+master.mem[        272]=10
+master.mem[        273]=11
+master.mem[        274]=12
+master.mem[        275]=13
+master.mem[        276]=14
+master.mem[        277]=15
+master.mem[        278]=16
+master.mem[        279]=17
+master.mem[        280]=18
+master.mem[        281]=19
+master.mem[        282]=1a
+master.mem[        283]=1b
+master.mem[        284]=1c
+master.mem[        285]=1d
+master.mem[        286]=1e
+master.mem[        287]=1f
+master.mem[        288]=20
+master.mem[        289]=21
+master.mem[        290]=22
+master.mem[        291]=23
+master.mem[        292]=24
+master.mem[        293]=25
+master.mem[        294]=26
+master.mem[        295]=27
+master.mem[        296]=28
+master.mem[        297]=29
+master.mem[        298]=2a
+master.mem[        299]=2b
+master.mem[        300]=2c
+master.mem[        301]=2d
+master.mem[        302]=2e
+master.mem[        303]=2f
+master.mem[        304]=30
+master.mem[        305]=31
+master.mem[        306]=32
+master.mem[        307]=33
+master.mem[        308]=34
+master.mem[        309]=35
+master.mem[        310]=36
+master.mem[        311]=37
+master.mem[        312]=38
+master.mem[        313]=39
+master.mem[        314]=3a
+master.mem[        315]=3b
+master.mem[        316]=3c
+master.mem[        317]=3d
+master.mem[        318]=3e
+master.mem[        319]=3f

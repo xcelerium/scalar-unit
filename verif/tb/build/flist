@@ -3,7 +3,27 @@
 // tb src path:   hydra_su/verif/tb/src
 // dut src path:  hydra_su/src
 
+//$RISCV_CORE_ROOT/src/riscv_core_pkg.sv
+
+//$RISCV_CORE_ROOT/src/queue.sv
+
+//$RISCV_CORE_ROOT/verif/tb/src/itrc.sv
+
 -f $HYDRA_SU_ROOT/build/flist
 
+$HYDRA_SU_ROOT/verif/tb/src/prog_image_pkg.sv
+$HYDRA_SU_ROOT/verif/tb/src/coproc.sv
+
 // Temporary for dp_ram
+$HYDRA_SU_ROOT/../hydra_tile/sub/axi_misc/alex_axi/src/axi_ram_wr_rd_if.v
+$HYDRA_SU_ROOT/../hydra_tile/sub/axi_misc/alex_axi/src/axi_ram_wr_if.v
+$HYDRA_SU_ROOT/../hydra_tile/sub/axi_misc/alex_axi/src/axi_ram_rd_if.v
+$HYDRA_SU_ROOT/../hydra_tile/sub/axi_misc/alex_axi/src/axi_dp_ram.v
+$HYDRA_SU_ROOT/verif/tb/src/hydra_axi_pkg.sv
+$HYDRA_SU_ROOT/../hydra_tile/src/dp_ram64.sv
+
+// $HYDRA_SU_ROOT/verif/tb/src/hydra_axi_pkg.sv
 $HYDRA_SU_ROOT/verif/tb/src/tb.sv
+$HYDRA_SU_ROOT/sub/common/vip/axi/include/axi_driver_pkg.sv
+//$HYDRA_SU_ROOT/sub/common/vip/axi/include/axi_master_pkg.sv
+$HYDRA_SU_ROOT/sub/common/vip/axi/src/axi_master_64b.sv

@@ -1,0 +1,7 @@
+*.[oa]
+*~
+*.dis
+*.lst
+*.elf
+*.hex
+*.sym

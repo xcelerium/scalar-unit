@@ -1,0 +1,15 @@
+# Run Notes
+
+# Interactive session
+
+bash> vivado -mode tcl
+
+vivado% source runsynth.tcl
+
+vivado% synth_design -top hydra_su -mode out_of_context
+
+
+# Batch session
+
+bash> vivado -mode batch -source runsynth.tcl
+

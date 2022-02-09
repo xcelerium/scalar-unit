@@ -1,0 +1,20 @@
+Vivado Simulator v2020.3.0
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2020.3/bin/unwrapped/lnx64.o/xelab -wto c41800f2824d47ee904d09a45efe0f25 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L unisims_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/projects/hydra/raheel/common/vip/axi/verif/tb.sv" Line 24. Module tb has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/projects/hydra/raheel/common/vip/axi/verif/tb.sv" Line 24. Module tb has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/projects/hydra/raheel/common/vip/axi/verif/project_axi_master/project_axi_master.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/projects/hydra/raheel/common/vip/axi/verif/project_axi_master/project_axi_master.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.axi_pkg
+Compiling package xil_defaultlib.axi_driver_pkg
+Compiling module xil_defaultlib.AXI_BUS_DV(AXI_ADDR_WIDTH=32'b01...
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav

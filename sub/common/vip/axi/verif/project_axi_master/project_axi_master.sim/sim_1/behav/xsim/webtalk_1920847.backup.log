@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Webtalk v2020.3 (64-bit)
+# SW Build 3173277 on Wed Apr  7 05:07:21 MDT 2021
+# IP Build 3174024 on Wed Apr  7 23:42:35 MDT 2021
+# Start of session at: Sat Aug 28 18:30:36 2021
+# Process ID: 1920847
+# Current directory: /projects/hydra/raheel/common/vip/axi/verif/project_axi_master/project_axi_master.sim/sim_1/behav/xsim
+# Command line: wbtcv -mode batch -source /projects/hydra/raheel/common/vip/axi/verif/project_axi_master/project_axi_master.sim/sim_1/behav/xsim/xsim.dir/tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /projects/hydra/raheel/common/vip/axi/verif/project_axi_master/project_axi_master.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: /projects/hydra/raheel/common/vip/axi/verif/project_axi_master/project_axi_master.sim/sim_1/behav/xsim/webtalk.jou
+#-----------------------------------------------------------
+source /projects/hydra/raheel/common/vip/axi/verif/project_axi_master/project_axi_master.sim/sim_1/behav/xsim/xsim.dir/tb_behav/webtalk/xsim_webtalk.tcl -notrace
+webtalk_transmit: Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 420.559 ; gain = 0.000 ; free physical = 15997 ; free virtual = 23993
+INFO: [Common 17-206] Exiting Webtalk at Sat Aug 28 18:30:48 2021...

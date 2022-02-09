@@ -1,0 +1,56 @@
+The VIP now supports both an AXI4 master model and and an AXI4 slave model.
+
+1.  AXI master
+    
+    'include/axi_master_pkg.sv' contains a package containing SV classes for 
+    related to axi_master and helper functions. The SV classes are 
+    parameterized and can support a variety of AXI configurations
+
+    'src/axi_master_64b.sv' contains a 64b AXI master that works 
+    with a specific AXI configuration (DATA_WIDTH, ADDR_WIDTH, etc.)
+
+    The AXI master class contains an internal memory that holds AXI burst
+    data for both read and write bursts. The user must place data in the
+    master's memory (using mem_read() and mem_write() functions) before invoking    the axi_write() or axi_read() tasks.
+
+    The axi_write(addr,num_bytes,status) tasks triggers a write burst to 
+    of 'num_bytes' bytes to address 'addr'. The data transferred in the W
+    channel is assumed to be stored in 'mem' at index 0.  Any burst length less
+    than MAX_BURST_LEN bytes is supported. Only bursts of type INCR are 
+    supported at this time. The write task does not enforce rules regarding
+    address wrap-around-- this functionality is assumed to be handled by
+    an external entity.
+
+    The axi_read(addr,num_bytes,status) tasks triggers a read burst of 'num_bytes'
+    bytes to the address specifed by 'addr'.  The data transferred over the R 
+    channel is stored in 'mem' starting at offset MAX_BURST_LEN. Only bursts of 
+    INCR types are supported at this time. No wrap-aroudn rules are enforced. 
+
+    It is possible to execute both axi_read() and axi_write() tasks concurrently
+    from a fork-join block.
+
+    axi_read_single() and axi_write_single() trigger AXI bursts of len=0; this
+    functionality is as subset of functionality supported by axi_read() and
+    axi_write() tasks.
+
+2. AXI slave
+
+   'include/axi_slave_pkg.sv' contians SV classes that encapsulate an AXI
+   slave functions and tasks. The classes are parameterizied and support a
+   variety of AXI configruations.
+
+   'include/axi_slave_64b.sv' contians a specific AXI configuration.
+
+   The axi_slave also contains an associative array memory (mem) that is used
+   to store data received by axi_write bursts.
+
+   The slave contains 'mem_read()' and 'mem_write()' functions for backdoor 
+   access to the internal memory.
+
+   However, once initialized, the slave does not need to be activated by any
+   tasks; it constantly listens to the AXI AW and AR channels and implements 
+   write or read bursts.  Write burts are committed to the address specified by 
+   the AW channel and read burts return data stored at the address specified
+   by the AR channel. In the event unintialized data is accessed, 'x' values
+   are returned.
+

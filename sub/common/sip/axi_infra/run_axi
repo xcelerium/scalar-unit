@@ -1,0 +1,4 @@
+xvlog -sv -f flist.f
+xelab -top tb -debug all
+#xsim work.tb -gui
+xsim work.tb -R

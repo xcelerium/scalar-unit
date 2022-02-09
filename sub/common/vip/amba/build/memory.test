@@ -1,0 +1,29 @@
+DIR:=${CURDIR}
+SDIR=$(DIR)/src
+IDIR=$(DIR)/include
+ODIR=$(DIR)/obj
+COMPONENT=memory
+
+CC   = g++
+CFLAGS=-I/$(IDIR) -I$(SYSTEMC_HOME)/include -L$(SYSTEMC_HOME)/lib-linux64 --std=c++14 #-g
+LIBS=-lm -lsystemc
+
+_DEPS = $(COMPONENT).h $(COMPONENT).h
+
+DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
+
+$(ODIR)/%.o: $(SDIR)/%.cpp $(DEPS)
+	$(CC) -c -o $@ $< $(CFLAGS)
+
+_OBJ = $(COMPONENT)_system.o $(COMPONENT)_tb.o $(COMPONENT).o
+OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
+
+run_$(COMPONENT): $(OBJ) 
+	$(CC) -o $@ $^ $(CFLAGS) $(LIBS)
+
+all:
+	verilator -sc pipeline.sv
+
+clean:
+	rm -rf obj_dir logs *.log *.dmp *.vpd coverage.dat core $(ODIR)/*.o run
+

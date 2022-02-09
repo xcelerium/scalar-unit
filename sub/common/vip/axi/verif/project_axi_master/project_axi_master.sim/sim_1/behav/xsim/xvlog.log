@@ -1,0 +1,7 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/projects/hydra/raheel/common/vip/axi/verif/mem_model/hydra_axi_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/projects/hydra/raheel/common/vip/axi/verif/mem_model/axi_pkg.sv" into library xil_defaultlib
+WARNING: [VRFC 10-3264] design element 'axi_pkg' is previously defined, ignoring this definition [/projects/hydra/raheel/common/vip/axi/verif/mem_model/axi_pkg.sv:21]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/projects/hydra/raheel/common/vip/axi/verif/mem_model/axi_intf.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/projects/hydra/raheel/common/vip/axi/include/axi_driver_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/projects/hydra/raheel/common/vip/axi/verif/tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb

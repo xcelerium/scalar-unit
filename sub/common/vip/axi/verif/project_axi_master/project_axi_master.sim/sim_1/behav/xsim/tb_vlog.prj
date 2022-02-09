@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  --include "../../../../../axi" --include "../../../../../mem_model" --include "../../../../../../include" \
+"../../../../../mem_model/hydra_axi_pkg.sv" \
+"../../../../../mem_model/axi_pkg.sv" \
+"../../../../../mem_model/axi_intf.sv" \
+"../../../../../../include/axi_driver_pkg.sv" \
+"../../../../../tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

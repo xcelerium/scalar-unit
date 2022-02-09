@@ -1,0 +1,37 @@
+Build And Run Notes
+
+# set env vars for hydra_su and its components - riscv_core & common
+
+> source task_setup.bash
+
+# check env vars
+
+>echo $HYDRA_SU_ROOT
+>echo $RISCV_CORE_ROOT
+>echo $SCRATCH_ROOT
+
+# build and run tests 
+
+> cd verif/xbar
+> ls ../tests/
+> make run TESTGRP=coproc_test TEST=test.s
+
+#  At the end of test run following are reported on screen
+#    test status ( "TEST PASSED")
+#       For these test both self-check and itrace check
+#    full test run dir path  (under $SCRATCH_ROOT)
+#    command to open test.dis and test.itrc
+
+# interactive simulation (change "run" to "sim"
+> make sim TESTGRP=coproc_test TEST=test.s
+
+# Other tests to run on hydra_su:
+
+> make run TESTGRP=exc_bringup_test TEST=test.s
+> make run TESTGRP=int_bringup_test TEST=test.s
+> make run TESTGRP=mem_test TEST=test.cpp
+
+# test sources
+> cd verif/test/<testname>
+
+

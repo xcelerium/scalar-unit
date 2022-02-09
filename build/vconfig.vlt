@@ -1,0 +1,26 @@
+`verilator_config
+
+lint_off -rule PINMISSING
+lint_off -rule WIDTHCONCAT
+lint_off -rule UNPACKED
+lint_off -rule WIDTH
+lint_off -rule LITENDIAN
+lint_off -rule INFINITELOOP
+lint_off -rule CASEINCOMPLETE
+lint_off -rule CASEX
+lint_off -rule CASEOVERLAP
+lint_off -rule BLKANDNBLK
+lint_off -rule UNSIGNED
+lint_off -rule CMPCONST
+
+lint_off -rule UNOPT -file "*/pulp_common/*"
+lint_off -file "*/ariane/*"
+lint_off -rule UNPACKED -file "*/ariane/*"
+lint_off -rule SYMRSVDWORD -file "*/ariane/*"
+lint_off -rule WIDTH -file "/spe.sv"
+lint_off -rule WIDTH -file "/spe_exe_pipeline.sv"
+lint_off -rule WIDTH -file "*/spe_vmult_pkg.sv"
+lint_off -rule WIDTH -file "*/spe_mult.sv"
+lint_off -rule WIDTH -file "*/spe_vmult.sv"
+lint_off -rule UNOPT
+lint_off -rule UNOPTFLAT
