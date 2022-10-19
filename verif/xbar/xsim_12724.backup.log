@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# xsim v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Sat Feb 12 07:02:07 2022
+# Process ID: 12724
+# Current directory: /home/mshahzaib/Desktop/nova-design/scalar-unit/verif/xbar
+# Command line: xsim -source {xsim.dir//home/mshahzaib/Desktop/nova-design/scratch/mshahzaib/Desktop/nova-design/su/vivado/hydrasusim/run/tests/int_bringup_test/test/hydrasusim.wdb/xsim_script.tcl}
+# Log file: /home/mshahzaib/Desktop/nova-design/scalar-unit/verif/xbar/xsim.log
+# Journal file: /home/mshahzaib/Desktop/nova-design/scalar-unit/verif/xbar/xsim.jou
+#-----------------------------------------------------------
+start_gui
+source xsim.dir//home/mshahzaib/Desktop/nova-design/scratch/mshahzaib/Desktop/nova-design/su/vivado/hydrasusim/run/tests/int_bringup_test/test/hydrasusim.wdb/xsim_script.tcl
+# set_param project.enableReportConfiguration 0
+# load_feature core
+# current_fileset
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2021.1/data/ip'.
+current_fileset: Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 9753.895 ; gain = 47.496 ; free physical = 1427 ; free virtual = 25164
+# xsim {/home/mshahzaib/Desktop/nova-design/scratch/mshahzaib/Desktop/nova-design/su/vivado/hydrasusim/run/tests/int_bringup_test/test/hydrasusim.wdb} -autoloadwcfg

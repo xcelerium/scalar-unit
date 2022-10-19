@@ -11,7 +11,7 @@
 // Author: Florian Zaruba, ETH Zurich
 // Date: 19.03.2017
 // Description: Ariane Top-level module
-
+`define WT_DCACHE
 `ifdef DROMAJO
 import "DPI-C" function void dromajo_trap(int     hart_id,
                                           longint cause);
@@ -29,8 +29,8 @@ module ariane import ariane_pkg::*; #(
   input  logic                         clk_i,
   input  logic                         rst_ni,
   // Core ID, Cluster ID and boot address are considered more or less static
-  input  logic [riscv::VLEN-1:0]       boot_addr_i,  // reset boot address
-  input  logic [riscv::XLEN-1:0]       hart_id_i,    // hart id in a multicore environment (reflected in a CSR)
+  input  logic [63:0]                  boot_addr_i,  // reset boot address
+  input  logic [63:0]                  hart_id_i,    // hart id in a multicore environment (reflected in a CSR)
 
   // Interrupt inputs
   input  logic [1:0]                   irq_i,        // level sensitive IR lines, mip & sip (async)
@@ -41,11 +41,6 @@ module ariane import ariane_pkg::*; #(
 `ifdef FIRESIM_TRACE
   // firesim trace port
   output traced_instr_pkg::trace_port_t trace_o,
-`endif
-`ifdef RVFI_TRACE
-  // RISC-V formal interface port (`rvfi`):
-  // Can be left open when formal tracing is not needed.
-  output ariane_rvfi_pkg::rvfi_port_t  rvfi_o,
 `endif
 `ifdef PITON_ARIANE
   // L15 (memory side)
@@ -411,11 +406,11 @@ module ariane import ariane_pkg::*; #(
     .no_st_pending_o        ( no_st_pending_ex            ),
     // FPU
     .fpu_ready_o            ( fpu_ready_ex_id             ),
-    .fpu_valid_i            ( 'b0 ),
-    .fpu_fmt_i              ( 'b0 ),
-    .fpu_rm_i               ( 'b0 ),
-    .fpu_frm_i              ( 'b0 ),
-    .fpu_prec_i             ( 'b0 ),
+    .fpu_valid_i            ( fpu_valid_id_ex             ),
+    .fpu_fmt_i              ( fpu_fmt_id_ex               ),
+    .fpu_rm_i               ( fpu_rm_id_ex                ),
+    .fpu_frm_i              ( frm_csr_id_issue_ex         ),
+    .fpu_prec_i             ( fprec_csr_ex                ),
     .fpu_trans_id_o         ( fpu_trans_id_ex_id          ),
     .fpu_result_o           ( fpu_result_ex_id            ),
     .fpu_valid_o            ( fpu_valid_ex_id             ),
@@ -865,7 +860,7 @@ module ariane import ariane_pkg::*; #(
     if (~rst_ni) begin
       cycles <= 0;
     end else begin
-      byte mode = "";
+      string mode = "";
       if (debug_mode) mode = "D";
       else begin
         case (priv_lvl)
@@ -898,39 +893,5 @@ module ariane import ariane_pkg::*; #(
   end
 `endif // VERILATOR
 //pragma translate_on
-
-`ifdef RVFI_TRACE
-  always_comb
-    for (int i = 0; i < NR_COMMIT_PORTS; i++) begin
-      logic exception, mem_exception;
-      exception = commit_instr_id_commit[i].valid && commit_instr_id_commit[i].ex.valid && ex_commit.valid;
-      mem_exception = exception &&
-        (commit_instr_id_commit[i].ex.cause == riscv::INSTR_ADDR_MISALIGNED ||
-         commit_instr_id_commit[i].ex.cause == riscv::INSTR_ACCESS_FAULT ||
-         commit_instr_id_commit[i].ex.cause == riscv::ILLEGAL_INSTR ||
-         commit_instr_id_commit[i].ex.cause == riscv::LD_ADDR_MISALIGNED ||
-         commit_instr_id_commit[i].ex.cause == riscv::LD_ACCESS_FAULT ||
-         commit_instr_id_commit[i].ex.cause == riscv::ST_ADDR_MISALIGNED ||
-         commit_instr_id_commit[i].ex.cause == riscv::ST_ACCESS_FAULT ||
-         commit_instr_id_commit[i].ex.cause == riscv::INSTR_PAGE_FAULT ||
-         commit_instr_id_commit[i].ex.cause == riscv::LOAD_PAGE_FAULT ||
-         commit_instr_id_commit[i].ex.cause == riscv::STORE_PAGE_FAULT);
-      // when rvfi_valid, the instruction is executed
-      rvfi_o[i].valid    = (commit_ack[i] && !commit_instr_id_commit[i].ex.valid) ||
-        (exception && (commit_instr_id_commit[i].ex.cause == riscv::ENV_CALL_MMODE ||
-                  commit_instr_id_commit[i].ex.cause == riscv::ENV_CALL_SMODE ||
-                  commit_instr_id_commit[i].ex.cause == riscv::ENV_CALL_UMODE));
-      rvfi_o[i].insn     = commit_instr_id_commit[i].ex.tval[31:0];
-      // when trap, the instruction is not executed
-      rvfi_o[i].trap     = mem_exception;
-      rvfi_o[i].mode     = debug_mode ? 2'b10 : priv_lvl;
-      rvfi_o[i].ixl      = riscv::XLEN == 64 ? 2 : 1;
-      rvfi_o[i].rs1_addr = commit_instr_id_commit[i].rs1;
-      rvfi_o[i].rs2_addr = commit_instr_id_commit[i].rs2;
-      rvfi_o[i].rd_addr  = commit_instr_id_commit[i].rd;
-      rvfi_o[i].rd_wdata = ariane_pkg::is_rd_fpr(commit_instr_id_commit[i].op) == 0 ? wdata_commit_id[i] : commit_instr_id_commit[i].result;
-      rvfi_o[i].pc_rdata = commit_instr_id_commit[i].pc;
-    end
-`endif
 
 endmodule // ariane

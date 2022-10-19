@@ -1,0 +1,149 @@
+/*
+
+Xilinx xsim v2021.1 (64-bit) [Major: 2021, Minor: 1]
+SW Build: 3247384 on Thu Jun 10 19:36:07 MDT 2021
+IP Build: 3246043 on Fri Jun 11 00:30:35 MDT 2021
+
+Process ID (PID): 12724
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Sat Feb 12 07:02:35 UTC 2022
+Time zone: 	Coordinated Universal Time (UTC)
+
+OS: CentOS Linux release 7.9.2009 (Core)
+OS Version: 3.10.0-1160.49.1.el7.x86_64
+OS Architecture: amd64
+Available processors (cores): 8
+
+Display: 4.0
+Screen size: 1700x900
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.2 64-bit
+Java home: 	/opt/Xilinx/Vivado/2021.1/tps/lnx64/jre11.0.2
+Java executable: 	/opt/Xilinx/Vivado/2021.1/tps/lnx64/jre11.0.2/bin/java
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	mshahzaib/Desktop/nova-design
+User home directory: /home/mshahzaib/Desktop/nova-design
+User working directory: /home/mshahzaib/Desktop/nova-design/scalar-unit/verif/xbar
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /opt/Xilinx/Vivado
+HDI_APPROOT: /opt/Xilinx/Vivado/2021.1
+RDI_DATADIR: /opt/Xilinx/Vivado/2021.1/data
+RDI_BINDIR: /opt/Xilinx/Vivado/2021.1/bin
+
+Vivado preferences file: /home/mshahzaib/Desktop/nova-design/.Xilinx/xsim/2021.1/vivado.xml
+Vivado preferences directory: /home/mshahzaib/Desktop/nova-design/.Xilinx/xsim/2021.1/
+Vivado layouts directory: /home/mshahzaib/Desktop/nova-design/.Xilinx/xsim/2021.1/data/layouts
+PlanAhead jar file: 	/opt/Xilinx/Vivado/2021.1/lib/classes/planAhead.jar
+Vivado log file: 	/home/mshahzaib/Desktop/nova-design/scalar-unit/verif/xbar/xsim.log
+Vivado journal file: 	/home/mshahzaib/Desktop/nova-design/scalar-unit/verif/xbar/xsim.jou
+Engine tmp dir: 	./.Xil/xsim-12724-ip-172-32-20-153.ap-southeast-1.compute.internal
+
+Xilinx Environment Variables
+----------------------------
+XILINX_DSP: 
+XILINX_PLANAHEAD: /opt/Xilinx/Vivado/2021.1
+XILINX_SDK: /opt/Xilinx/Vitis/2021.1
+XILINX_VITIS: /opt/Xilinx/Vitis/2021.1
+XILINX_VIVADO: /opt/Xilinx/Vivado/2021.1
+
+
+GUI allocated memory:	308 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 7,683 MB
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: START_PROGRESS_DIALOG
+// bz (cs):  Sourcing Tcl script 'xsim.dir//home/mshahzaib/Desktop/nova-design/scratch/mshahzaib/Desktop/nova-design/su/vivado/hydrasusim/run/tests/int_bringup_test/test/hydrasusim.wdb/xsim_script.tcl' : addNotify
+// Tcl Message: source xsim.dir//home/mshahzaib/Desktop/nova-design/scratch/mshahzaib/Desktop/nova-design/su/vivado/hydrasusim/run/tests/int_bringup_test/test/hydrasusim.wdb/xsim_script.tcl 
+// Tcl Message: # set_param project.enableReportConfiguration 0 # load_feature core 
+// TclEventType: LOAD_FEATURE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: # current_fileset 
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 7,757 MB. GUI used memory: 53 MB. Current time: 2/12/22, 7:02:36 AM UTC
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 84 MB (+85319kb) [00:00:15]
+// [Engine Memory]: 7,834 MB (+8062933kb) [00:00:16]
+// WARNING: HEventQueue.dispatchEvent() is taking  2236 ms.
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2021.1/data/ip'. 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: STOP_PROGRESS_DIALOG
+// Tcl Message: current_fileset: Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 9753.895 ; gain = 47.496 ; free physical = 1427 ; free virtual = 25164 
+// Tcl Message: # xsim {/home/mshahzaib/Desktop/nova-design/scratch/mshahzaib/Desktop/nova-design/su/vivado/hydrasusim/run/tests/int_bringup_test/test/hydrasusim.wdb} -autoloadwcfg 
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+dismissDialog("Sourcing Tcl script 'xsim.dir//home/mshahzaib/Desktop/nova-design/scratch/mshahzaib/Desktop/nova-design/su/vivado/hydrasusim/run/tests/int_bringup_test/test/hydrasusim.wdb/xsim_script.tcl'"); // bz
+// TclEventType: STOP_PROGRESS_DIALOG
+// [GUI Memory]: 93 MB (+5793kb) [00:00:21]
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// Elapsed time: 123 seconds
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE, "tb ; tb ; Verilog Module", 0, "tb", 1, true); // c - Node
+// TclEventType: SIMULATION_REQUEST_SELECT_SCOPES
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// [GUI Memory]: 127 MB (+30432kb) [00:02:23]
+// TclEventType: SIMULATION_REQUEST_SELECT_SCOPES
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE, "u_hydra_su ; hydra_su ; Verilog Module", 1, "u_hydra_su", 0, true); // c - Node
+// TclEventType: SIMULATION_REQUEST_SELECT_SCOPES
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE, "u_hydra_su ; hydra_su ; Verilog Module", 1, "u_hydra_su", 0, true); // c - Node
+// TclEventType: SIMULATION_REQUEST_SELECT_SCOPES
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE, "tb ; tb ; Verilog Module", 0, "tb", 0, true); // c - Node
+// TclEventType: SIMULATION_REQUEST_SELECT_SCOPES
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED

@@ -4,7 +4,7 @@ ENTRY( _start )
 /* All in Bytes */
 ILM_BASE  = 0;
 DLM_BASE  = 64K;
-CMEM_BASE = 2048M;
+CMEM_BASE = 1048576M;
 
 ILM_SIZE  = 16K;
 DLM_SIZE  = 16K;

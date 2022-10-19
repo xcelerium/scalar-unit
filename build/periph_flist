@@ -2,7 +2,7 @@
 //   (axi_node)
 
 //$EXTERN/../../verif/tb/src/axi_pkg.sv
-
+# /home/$USER/update_bd/afi_check/matmul/hardware/sub/pulp_common/axi/src/axi_pkg.sv
 // --------
 // axi interface
 // --------
@@ -146,4 +146,34 @@ $EXTERN/openhwgroup/cva6/src/riscv-dbg/src/dm_sba.sv
 $EXTERN/openhwgroup/cva6/src/riscv-dbg/debug_rom/debug_rom.sv
 $EXTERN/openhwgroup/cva6/src/riscv-dbg/src/dm_mem.sv
 $EXTERN/openhwgroup/cva6/src/riscv-dbg/src/dm_top.sv
-
+# /home/$USER/update_bd/afi_check/matmul/hardware/sub/pulp_common/axi/src/axi_err_slv.sv
+/home/$USER/Nova1/scalar-unit/sub/external/openhwgroup/cva6/src/common_cells/src/spill_register.sv
+# /home/$USER/update_bd/afi_check/matmul/hardware/sub/pulp_common/common_cells/src/delta_counter.sv
+# /home/$USER/update_bd/afi_check/matmul/hardware/sub/pulp_common/common_cells/src/counter.sv
+# /home/$USER/update_bd/afi_check/matmul/hardware/sub/pulp_common/common_cells/src/onehot_to_bin.sv
+# /home/$USER/update_bd/afi_check/matmul/hardware/sub/pulp_common/common_cells/src/cf_math_pkg.sv
+# /home/$USER/update_bd/afi_check/matmul/hardware/sub/pulp_common/common_cells/src/id_queue.sv
+# /home/$USER/update_bd/afi_check/matmul/hardware/sub/pulp_common/axi/src/axi_demux.sv
+# /home/$USER/update_bd/afi_check/matmul/hardware/sub/pulp_common/common_cells/src/stream_register.sv
+/home/$USER/Nova1/scalar-unit/sub/riscv_core/src/axi_shim.sv
+/home/$USER/Nova1/scalar-unit/sub/riscv_core/src/cache_subsystem/wt_axi_adapter.sv
+/home/$USER/Nova1/scalar-unit/sub/riscv_core/src/cache_subsystem/wt_cache_subsystem.sv
+/home/$USER/Nova1/scalar-unit/sub/riscv_core/src/ariane.sv
+# /home/$USER/update_bd/afi_check/matmul/hardware/src/matmul_axi_pkg.sv
+# /home/$USER/update_bd/afi_check/matmul/hardware/src/matmul_pkg.sv
+# /home/$USER/update_bd/afi_check/matmul/hardware/src/mm_rif.sv
+# /home/$USER/update_bd/afi_check/matmul/hardware/src/mm_task_sequencer.sv
+# /home/$USER/update_bd/afi_check/matmul/hardware/src/mm_ld_controller.sv
+# /home/$USER/update_bd/afi_check/matmul/hardware/src/mm_st_controller.sv
+# /home/$USER/update_bd/afi_check/matmul/hardware/src/mm_inmem.sv
+# /home/$USER/update_bd/afi_check/matmul/hardware/src/mm_acc.sv
+# /home/$USER/update_bd/afi_check/matmul/hardware/src/mm_format.sv
+# /home/$USER/update_bd/afi_check/matmul/hardware/src/mm_rif_axi_lite.sv
+# /home/$USER/update_bd/afi_check/matmul/hardware/src/mm_sram.sv
+# /home/$USER/update_bd/afi_check/matmul/hardware/sub/pulp_common/axi/src/axi_to_axi_lite.sv
+# /home/$USER/update_bd/afi_check/matmul/hardware/sub/pulp_common/axi/src/axi_atop_filter.sv
+# /home/$USER/update_bd/afi_check/matmul/hardware/sub/pulp_common/axi/src/axi_burst_splitter.sv
+# /home/$USER/update_bd/afi_check/matmul/hardware/sub/axi_vreader_vwriter/src/rm_aligner.sv
+# /home/$USER/update_bd/afi_check/matmul/hardware/sub/axi_vreader_vwriter/src/axi_vwriter.sv
+# /home/$USER/update_bd/afi_check/matmul/hardware/sub/axi_vreader_vwriter/src/axi_vreader.sv
+# /home/$USER/update_bd/afi_check/matmul/hardware/src/matmul_top.sv
