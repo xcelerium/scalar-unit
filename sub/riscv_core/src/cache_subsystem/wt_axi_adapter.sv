@@ -153,7 +153,7 @@ module wt_axi_adapter import ariane_pkg::*; import wt_cache_pkg::*; #(
 
     // signal that an invalidation message
     // needs to be generated
-    invalidate   = 1'b0;
+    //invalidate   = 1'b0;
 
     // decode message type
     if (|arb_req) begin
@@ -226,6 +226,8 @@ module wt_axi_adapter import ariane_pkg::*; import wt_cache_pkg::*; #(
         //////////////////////////////////////
         endcase
       end
+    end else begin // modified
+      invalidate   = 1'b0;
     end
   end
 
@@ -377,7 +379,7 @@ module wt_axi_adapter import ariane_pkg::*; import wt_cache_pkg::*; #(
     // read shift registers
     icache_rd_shift_d = icache_rd_shift_q;
     dcache_rd_shift_d = dcache_rd_shift_q;
-    icache_first_d    = icache_first_q;
+    //icache_first_d    = icache_first_q;
     dcache_first_d    = dcache_first_q;
 
     if (icache_rtrn_rd_en) begin
@@ -387,7 +389,9 @@ module wt_axi_adapter import ariane_pkg::*; import wt_cache_pkg::*; #(
       if (icache_first_q) begin
         icache_rd_shift_d[0] = axi_rd_data;
       end
-    end
+     end else begin // modified 
+       icache_first_d    = icache_first_q;
+     end
 
     if (dcache_rtrn_rd_en) begin
       dcache_first_d    = axi_rd_last;

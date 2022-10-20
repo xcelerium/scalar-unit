@@ -25,11 +25,11 @@ GCC_OPT =-nostdlib -nostartfiles -Wl,--no-relax -Wa,-als,-al
 GCC_LINK_OPT =-nostdlib -nostartfiles -Wl,--no-relax -Wa,-als,-al
 
 
-#build: $(NAME).hex $(NAME).sym $(NAME).dis
+build: $(NAME).hex $(NAME).sym $(NAME).dis
 build:
 
-#boot.o: boot.s
-#	$(GCC) -Wa,-als,-al -c -o boot.o boot.s >boot.lst
+boot.o: boot.s
+	$(GCC) -Wa,-als,-al -c -o boot.o boot.s >boot.lst
 
 $(NAME).o: $(NAME).s cpinstr.inc
 	$(GCC) -Wa,-als,-al -c -o $(NAME).o $(NAME).s >$(NAME).lst

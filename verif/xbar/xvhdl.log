@@ -1,0 +1,8 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/mshahzaib/Desktop/nova-design/cl_desgin1/cl_desgin1.gen/sources_1/bd/cl_nova1/ip/cl_nova1_axi_bram_ctrl_0_0/sim/cl_nova1_axi_bram_ctrl_0_0.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'cl_nova1_axi_bram_ctrl_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/mshahzaib/Desktop/nova-design/cl_desgin1/cl_desgin1.gen/sources_1/bd/cl_nova1/ip/cl_nova1_axi_uartlite_0_0/sim/cl_nova1_axi_uartlite_0_0.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'cl_nova1_axi_uartlite_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/mshahzaib/Desktop/nova-design/cl_desgin1/cl_desgin1.gen/sources_1/bd/cl_nova1/ip/cl_nova1_axi_uartlite_1_0/sim/cl_nova1_axi_uartlite_1_0.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'cl_nova1_axi_uartlite_1_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/mshahzaib/Desktop/nova-design/cl_desgin1/cl_desgin1.ip_user_files/bd/cl_nova1/ip/cl_nova1_axi_bram_ctrl_0_0/sim/cl_nova1_axi_bram_ctrl_0_0.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'cl_nova1_axi_bram_ctrl_0_0'

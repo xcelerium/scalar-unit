@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# xsim v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Sat Feb 12 07:02:07 2022
+# Process ID: 12724
+# Current directory: /home/mshahzaib/Desktop/nova-design/scalar-unit/verif/xbar
+# Command line: xsim -source {xsim.dir//home/mshahzaib/Desktop/nova-design/scratch/mshahzaib/Desktop/nova-design/su/vivado/hydrasusim/run/tests/int_bringup_test/test/hydrasusim.wdb/xsim_script.tcl}
+# Log file: /home/mshahzaib/Desktop/nova-design/scalar-unit/verif/xbar/xsim.log
+# Journal file: /home/mshahzaib/Desktop/nova-design/scalar-unit/verif/xbar/xsim.jou
+#-----------------------------------------------------------
+start_gui
+source xsim.dir//home/mshahzaib/Desktop/nova-design/scratch/mshahzaib/Desktop/nova-design/su/vivado/hydrasusim/run/tests/int_bringup_test/test/hydrasusim.wdb/xsim_script.tcl
